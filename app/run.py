@@ -42,7 +42,9 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
-
+    #Add another visual - whether messages are related or not
+    related_counts = df.groupby('related').count()['message']
+    related_names = list(related_counts.index)
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -62,6 +64,24 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=related_names,
+                    y=related_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Mesages Classed as Related or Not',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Related"
                 }
             }
         }
