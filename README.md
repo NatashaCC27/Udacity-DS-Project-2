@@ -1,5 +1,8 @@
 # Disaster Response Pipeline Project
 
+### Background:
+Project 2 for Udacity's Data Science nanodegree, aim is to categorise real messgaes sent during disaster events.
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
